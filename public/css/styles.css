@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-/*font-family: 'Nunito', sans-serif;*/
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Cormorant+SC|Nunito|Roboto');
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500,900);
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+/*
+font-family: 'Cinzel', serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Cormorant SC', serif;
+*/
 
 .title {
   margin-top: 300px;
@@ -10,7 +17,7 @@
   font-family: Nunito;
 }
 
-#projects, #skills, #about {
+#development, #design, #skills, #about {
   padding-top: 90px;
 }
 
@@ -41,7 +48,7 @@ img {
 }
 
 .nav-link:hover {
-  background-color: rgb(9,56,74);
+  background-color: #09384a;
   opacity: 0.95;
 }
 
@@ -67,11 +74,12 @@ img {
   line-height: 60px;
   font-size: 14px;
   color: #fff !important;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 2px;
 }
 
 section {
-    height:1000px;
+    height:800px;
     padding-top:50px;
     padding-bottom:50px;
     overflow:auto;
@@ -94,18 +102,8 @@ section {
     /*background-size:cover;*/
 }
 
-/*footer {
-    height: 60px;
-    background-color:#585858;
-    margin-top:50px;
-    padding-top:20px;
-    padding-bottom:20px;
-}
 
-#footer a {
-  color:#efefef;
-}*/
-
+/* Social Icons In Footer */
 
 .social-icon {
   list-style: none;
@@ -152,12 +150,9 @@ text-align: right;
 
 }
 
-.projects-left {
-  padding-right: 0;
-}
-
-.projects-right {
+.projects-left, .projects-right {
   padding-left: 0;
+  padding-right: 0;
 }
 
 .panel {
@@ -167,23 +162,23 @@ text-align: right;
 }
 
 
+.projects-title {
+  padding-left: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 0;
+  background-image: linear-gradient(#1d1d1d, #1d1d1d), linear-gradient(#fff, #fff)
+}
 
-
-
-
-
-
+hr {
+  padding-top: 0;
+  margin-top: 0;
+}
 
 body {
-  background: #1d1d1d;
-  /*color: #efedef;*/
-  /*font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  letter-spacing: 0.01em;
-  line-height: 1.6em;
-  margin: 0;
-  padding: 100px; */
+  background: #1D1D1D;
 }
 
 h1 {
@@ -192,99 +187,285 @@ h1 {
   color: rgba(255,255,255,0.2);
 }
 
-
-button:focus,
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
+body .container .well {
+  /*-webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
 
 
-.tabs {
-  display: block;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  overflow: hidden;
+
+/* Email Contact Form */
+.email-form {
+  font-family: 'Roboto', sans-serif;
+  background-color: #474747 !important;
 }
 
-.tabs [class^="tab"] label,
-.tabs [class*=" tab"] label {
-  color: #efedef;
-  cursor: pointer;
-  display: block;
-  font-size: 2.1em;
-  font-weight: 300;
-  line-height: 1em;
-  padding: 2rem 0;
+.email-title-card {
   text-align: center;
+  background: #09384a; /* Old Browsers */
+  background: -webkit-linear-gradient(top,#09384a,#245366); /*Safari 5.1-6*/
+  background: -o-linear-gradient(top,#09384a,#245366); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(top,#09384a,#245366); /*Fx 3.6-15*/
+  background: linear-gradient(to bottom, #09384a, #245366); /*Standard*/
 }
 
-.tabs [class^="tab"] [type="radio"],
-.tabs [class*=" tab"] [type="radio"] {
-  border-bottom: 1px solid rgba(239, 237, 239, 0.5);
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: block;
+.email-title {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.form-group .is-focused label, .form-group .is-focused label .control-label {
+  color: #fff !important;
+}
+
+.form-group .checkbox label, .form-group .radio label, .form-group label {
+  color: #fff !important;
+}
+
+.form-control {
+  color: #fff !important;
+}
+
+.form-group .is-focused .form-control {
+  background-image: linear-gradient(#e4e4e4, #e4e4e4), linear-gradient(#fff, #fff) !important;
+}
+
+.form-control, .form-group .form-control {
+  background-image: linear-gradient(#e4e4e4, #e4e4e4), linear-gradient(#fff, #fff) !important;
+}
+
+
+
+
+
+/* Image Hover Effects */
+
+
+.snip1446 {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  /*min-width: 230px;
+  max-width: 500px;
+  max-height: 400px;*/
   width: 100%;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
 }
-
-.tabs [class^="tab"] [type="radio"]:hover, .tabs [class^="tab"] [type="radio"]:focus,
-.tabs [class*=" tab"] [type="radio"]:hover,
-.tabs [class*=" tab"] [type="radio"]:focus {
-  border-bottom: 1px solid #fd264f;
+.snip1446 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
-
-.tabs [class^="tab"] [type="radio"]:checked,
-.tabs [class*=" tab"] [type="radio"]:checked {
-  border-bottom: 2px solid #fd264f;
+.snip1446 img {
+  opacity: 1;
+  width: 100%;
 }
-
-.tabs [class^="tab"] [type="radio"]:checked + div,
-.tabs [class*=" tab"] [type="radio"]:checked + div {
+.snip1446:after,
+.snip1446:before,
+.snip1446 figcaption:after,
+.snip1446 figcaption:before {
+  background: #000f1f;
+  width: 25%;
+  position: absolute;
+  content: '';
+  opacity: 0;
+  -webkit-transition: all 0.3s steps(4);
+  transition: all 0.3s steps(4);
+  z-index: 1;
+  top: 100%;
+  bottom: 0;
+}
+.snip1446:before {
+  left: 0;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+.snip1446:after {
+  left: 25%;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.snip1446 figcaption:before {
+  left: 50%;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  z-index: -1;
+}
+.snip1446 figcaption:after {
+  left: 75%;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  z-index: -1;
+}
+.snip1446 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 30px;
+}
+.snip1446 h2,
+.snip1446 p,
+.snip1446 .icons {
+  margin: 0;
+  width: 100%;
+  opacity: 0;
+}
+.snip1446 h2 {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.snip1446 p {
+  font-weight: 300;
+}
+.snip1446 .icons {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+}
+.snip1446 i {
+  padding: 0px 10px;
+  display: inline-block;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  opacity: 0.8;
+}
+.snip1446 i:hover {
   opacity: 1;
 }
-
-.tabs [class^="tab"] [type="radio"] + div,
-.tabs [class*=" tab"] [type="radio"] + div {
-  display: block;
-  opacity: 0;
-  padding: 2rem 0;
-  width: 90%;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+.snip1446:hover:after,
+.snip1446.hover:after,
+.snip1446:hover:before,
+.snip1446.hover:before,
+.snip1446:hover figcaption:after,
+.snip1446.hover figcaption:after,
+.snip1446:hover figcaption:before,
+.snip1446.hover figcaption:before {
+  top: 0;
+  opacity: 0.9;
+}
+.snip1446:hover figcaption h2,
+.snip1446.hover figcaption h2,
+.snip1446:hover figcaption p,
+.snip1446.hover figcaption p,
+.snip1446:hover figcaption .icons,
+.snip1446.hover figcaption .icons {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+.snip1446:hover figcaption h2,
+.snip1446.hover figcaption h2,
+.snip1446:hover figcaption .icons,
+.snip1446.hover figcaption .icons {
+  opacity: 1;
+}
+.snip1446:hover figcaption p,
+.snip1446.hover figcaption p {
+  opacity: 0.7;
 }
 
-.tabs .tab-2 {
-  width: 50%;
+
+
+/* LIGHTBOX */
+
+/* Style the Image Used to Trigger the Modal */
+.lightbox-img, i {
+    cursor: pointer;
 }
 
-.tabs .tab-2 [type="radio"] + div {
-  width: 200%;
-  margin-left: 200%;
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1031; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    cursor: pointer;
 }
 
-.tabs .tab-2 [type="radio"]:checked + div {
-  margin-left: 0;
+.modal img {
+  cursor: default;
 }
 
-.tabs .tab-2:last-child [type="radio"] + div {
-  margin-left: 100%;
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    /*max-height: 100%;*/
+    margin-bottom: 20px;
 }
 
-.tabs .tab-2:last-child [type="radio"]:checked + div {
-  margin-left: -100%;
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption1 {
+  position: fixed;
+  top: 15px;
+  left: 35px;
+  color: #f1f1f1;
+  font-size: 30px;
+  transition: 0.3s;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption1 {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: fixed;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        max-width: 700px;
+    }
 }

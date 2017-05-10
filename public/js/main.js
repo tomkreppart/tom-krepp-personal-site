@@ -18,59 +18,32 @@ $(document).ready(function() {
     });
   });
 
+
+// Image Lightbox
+  var myModal = document.getElementById('myModal');
+  var modalImg01 = document.getElementById("modalImg01");
+  var caption1 = document.getElementById("caption1");
+
+  $('.lightbox-img').on('click', function() {
+      myModal.style.display = "block";
+      var modalImg = $('img', this).attr('src');
+      var modalCaption = $('img', this).attr('alt');
+      modalImg01.src = modalImg
+      caption1.innerHTML = modalCaption
+
+      console.log(modalImg);
+  });
+
+  var span = document.getElementsByClassName("close")[0];
+
+  span.onclick = function() {
+    myModal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+      if (event.target == myModal) {
+          myModal.style.display = "none";
+      }
+  }
+
 });
-
-
-
-/*
- *
- * jQuery Simple Parallax Plugin
- *
- */
-//
-// (function($) {
-//
-//     $.fn.parallax = function(options) {
-//
-//         var windowHeight = $(window).height();
-//
-//         // Establish default settings
-//         var settings = $.extend({
-//             speed        : 0.15
-//         }, options);
-//
-//         // Iterate over each object in collection
-//         return this.each( function() {
-//
-//         	// Save a reference to the element
-//         	var $this = $(this);
-//
-//         	// Set up Scroll Handler
-//         	$(document).scroll(function(){
-//
-//     		        var scrollTop = $(window).scrollTop();
-//             	        var offset = $this.offset().top;
-//             	        var height = $this.outerHeight();
-//
-//     		// Check if above or below viewport
-// 			if (offset + height <= scrollTop || offset >= scrollTop + windowHeight) {
-// 				return;
-// 			}
-//
-// 			var yBgPosition = Math.round((offset - scrollTop) * settings.speed);
-//
-//                  // Apply the Y Background Position to Set the Parallax Effect
-//     			$this.css('background-position', 'center ' + yBgPosition + 'px');
-//
-//         	});
-//         });
-//     }
-// }(jQuery));
-//
-// $('.bg-1,.bg-3').parallax({
-// 	speed :	0.15
-// });
-//
-// $('.bg-2').parallax({
-// 	speed :	0.25
-// });
