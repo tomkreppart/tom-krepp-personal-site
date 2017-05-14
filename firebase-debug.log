@@ -1,0 +1,44 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/Cellar/node/7.4.0/bin/node /usr/local/bin/firebase deploy
+[debug] CLI Version:  3.6.1
+[debug] Platform:     darwin
+[debug] Node Version: v7.4.0
+[debug] Time:         Sat May 13 2017 20:20:26 GMT-0600 (MDT)
+[debug] ----------------------------------------------------------------------
+[debug]
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/tom-krepp-art
+ Sat May 13 2017 20:20:26 GMT-0600 (MDT)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/tom-krepp-art/tokens
+ Sat May 13 2017 20:20:26 GMT-0600 (MDT)
+[debug] <<< HTTP RESPONSE 200
+[info]
+[info] === Deploying to 'tom-krepp-art'...
+[info]
+[info] i  deploying hosting
+[info] i  hosting: preparing public directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/tom-krepp-art/uploads/-Kk3kRaErN1tFtKOVBPc?fileCount=69&message=
+ Sat May 13 2017 20:20:57 GMT-0600 (MDT)
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/Cellar/node/7.4.0/bin/node /usr/local/bin/firebase deploy
+[debug] CLI Version:  3.6.1
+[debug] Platform:     darwin
+[debug] Node Version: v7.4.0
+[debug] Time:         Sat May 13 2017 20:27:02 GMT-0600 (MDT)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/tom-krepp-art  
+ Sat May 13 2017 20:27:02 GMT-0600 (MDT)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/tom-krepp-art/tokens  
+ Sat May 13 2017 20:27:02 GMT-0600 (MDT)
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'tom-krepp-art'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing public directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/tom-krepp-art/uploads/-Kk3lxIA1kV0vDTH5M8K?fileCount=69&message=  
+ Sat May 13 2017 20:27:26 GMT-0600 (MDT)
