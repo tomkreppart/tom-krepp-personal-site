@@ -1,6 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500,900);
 @import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+/* font-family: 'Open Sans', sans-serif; */
+
 
 /* Body styling */
 
@@ -742,7 +744,7 @@ p {
 
 #design {
   width: 100%;
-  background: #EDEEEF;
+  background: #fff;
   margin: 1.7% 0px 0px 0px;
 }
 
@@ -1533,7 +1535,7 @@ figure.effect-zoe p.description {
 	position: absolute;
 	bottom: 8em;
 	padding: 2em;
-	color: #fff;
+	color: whitesmoke;
 	text-transform: none;
 	font-size: 90%;
 	opacity: 0;
@@ -1568,11 +1570,11 @@ figure.effect-zoe:hover p.description {
 }
 
 figure.effect-zoe:hover img {
-	filter: brightness(30%);
+	filter: brightness(20%);
 }
 
 /*figure.effect-zoe img {
-  transition: filter 0.2s;
+  transition: filter 0.1s;
 }*/
 
 figure.effect-zoe:hover figcaption,
@@ -1619,13 +1621,167 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 .clearfix:after { clear: both; }
 
 
-.figure a {
-	outline: none;
-	color: #3498db;
-	text-decoration: none;
-  padding-left: 10px;
+
+
+
+
+
+
+/* Effect 21: borders slight translate */
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-a:hover, a:focus {
-	color: #528cb3;
+.lang-icons p {
+	position: relative;
+	/*display: inline-block;*/
+	margin: 15px 25px;
+  padding: auto;
+	outline: none;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+  font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1.35em;
+}
+
+.lang-icons:hover p,
+.lang-icons:focus p {
+	outline: none;
+}
+
+.lang-icons p {
+	padding: 10px;
+	color: #237546;
+	font-weight: 400;
+	text-shadow: none;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.lang-icons p::before,
+.lang-icons p::after {
+	position: absolute;
+	left: 30%;
+	width: 40%;
+  /*text-align: center;*/
+	height: 2px;
+	background: #2d2d2d;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.lang-icons p::before {
+	top: 0;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.lang-icons p::after {
+	bottom: 0;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.lang-icons:hover p,
+.lang-icons:focus p {
+	color: #2d2d2d;
+  font-weight: 700;
+  -webkit-transition: font-weight 0.3s, -webkit-transform 0.3s;
+  -moz-transition: font-weight 0.3s, -moz-transform 0.3s;
+  transition: font-weight 0.3s, transform 0.3s;
+}
+
+.lang-icons:hover p::before,
+.lang-icons:focus p::before,
+.lang-icons:hover p::after,
+.lang-icons:focus p::after {
+	opacity: 0.5;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+p:active,p:hover {
+    outline: 0;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 780px) {
+
+  .lang-icons p::before,
+  .lang-icons p::after {
+  	left: 35%;
+  	width: 30%;
+  }
+
+  figure.effect-zoe p.description {
+    text-align: center;
+    position: absolute;
+    bottom: 2em;
+    padding: 2em;
+    color: #fff;
+    font-size: 1.7em !important;
+    text-transform: none;
+    font-size: 90%;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+    -webkit-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
+  }
+
+}
+
+@media screen and (max-width: 780px) {
+
+  .lang-icons p::before,
+  .lang-icons p::after {
+  	left: 30%;
+  	width: 40%;
+  }
+
+
+}
+
+@media screen and (max-width: 480px) {
+
+  .lang-icons p::before,
+  .lang-icons p::after {
+  	left: 20%;
+  	width: 60%;
+  }
+
+  figure.effect-zoe p.description {
+  	position: absolute;
+  	bottom: 2em;
+  	padding: 2em;
+  	color: #fff;
+    font-size: 0.7em !important;
+  	text-transform: none;
+  	font-size: 90%;
+  	opacity: 0;
+  	-webkit-transition: opacity 0.35s;
+  	transition: opacity 0.35s;
+  	-webkit-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
+  }
+
+  figure.effect-zoe h2 {
+  	float: left;
+    font-size: 0.9em;
+  }
+
 }
