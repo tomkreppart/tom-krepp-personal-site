@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+  /* Used for simulate hover  on touch events on mobile devices */
+  $('body').bind('touchstart', function() {});
+
   /* Every time the window is scrolled ... */
   $(window).scroll(function() {
 
@@ -48,31 +51,34 @@ $(document).ready(function() {
 
   homeScroll.init();
 
-  // Image Lightbox
+  // Image Lightbox on only tablets and desktop
   var myModal = document.getElementById('myModal');
   var modalImg01 = document.getElementById("modalImg01");
   var caption1 = document.getElementById("caption1");
 
-  $('.lightbox-img').on('click', function() {
-      myModal.style.display = "block";
-      var modalImg = $('img', this).attr('src');
-      var modalCaption = $('img', this).attr('alt');
-      modalImg01.src = modalImg
-      caption1.innerHTML = modalCaption
+  if($(window).width() > 481) {
 
-      console.log(modalImg);
-  });
+    $('.lightbox-img').on('click', function() {
+        myModal.style.display = "block";
+        var modalImg = $('img', this).attr('src');
+        var modalCaption = $('img', this).attr('alt');
+        modalImg01.src = modalImg
+        caption1.innerHTML = modalCaption
 
-  var span = document.getElementsByClassName("close")[0];
+        console.log(modalImg);
+    });
 
-  span.onclick = function() {
-    myModal.style.display = "none";
-  }
+    var span = document.getElementsByClassName("close")[0];
 
-  window.onclick = function(event) {
-      if (event.target == myModal) {
-          myModal.style.display = "none";
-      }
+    span.onclick = function() {
+      myModal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == myModal) {
+            myModal.style.display = "none";
+        }
+    }
   }
 
   $('.colored').hide();
@@ -87,6 +93,10 @@ $(document).ready(function() {
       $(this).find('i.colored').hide();
     }
   );
+
+
+
+
 });
 
 // End Fade in on Scroll
