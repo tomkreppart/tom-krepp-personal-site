@@ -60,7 +60,7 @@ $(document).ready(function() {
 
     $('.lightbox-img').on('click', function() {
         myModal.style.display = "block";
-        var modalImg = $('img', this).attr('src');
+        var modalImg = $('img', this).attr('data-src');
         var modalCaption = $('img', this).attr('alt');
         modalImg01.src = modalImg
         caption1.innerHTML = modalCaption
