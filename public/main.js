@@ -94,7 +94,13 @@ $(document).ready(function() {
     }
   );
 
+  $('img.giant-img').hide();
 
+  if($(window).width() > 1441) {
+    $('img.giant-img').show();
+    $('img.medium-img').hide();
+    $('img', '.lightbox-img').attr('data-src');
+  }
 
 
 });
