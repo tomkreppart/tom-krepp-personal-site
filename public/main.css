@@ -774,7 +774,7 @@ p {
     cursor: pointer;
 }
 .lightbox-img {
-  cursor : nesw-resize
+  cursor : pointer;
 }
 
 /* The Modal (background) */
@@ -1428,7 +1428,7 @@ footer {
 	width: 48%;*/
 	background: #3085a3;
 	text-align: center;
-	cursor: pointer;
+	/*cursor: pointer;*/
 }
 
 .grid figure:hover {
